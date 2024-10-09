@@ -1,0 +1,1 @@
+import{j as e}from"./react-CCeLOw5g.js";import{H as r}from"./@react-three-CSCsKIJt.js";const o=()=>e.jsx(r,{children:e.jsx("div",{className:"flex justify-center items-center",children:e.jsx("div",{className:"w-20 h-20 border-2 border-opacity-20 border-blue-500 border-t-blue-500 rounded-full animate-spin"})})});export{o as L};
