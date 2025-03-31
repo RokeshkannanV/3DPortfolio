@@ -6,7 +6,7 @@ import { Fox } from "../models/Fox";
 import useAlert from "../hooks/useAlert";
 import Alert from "../components/Alert";
 import Loader from "../components/Loader";
-import BioImage from "../assets/images/Bio.png"; // Import the bio image
+// import BioImage from "../assets/images/Bio.png"; // Import the bio image
 
 const Contact = () => {
   const formRef = useRef();
@@ -167,14 +167,14 @@ const Contact = () => {
           </Suspense>
         </Canvas>
 
-        {/* Bio image positioned on the right side */}
+        {/* Bio image positioned on the right side
         <div className="absolute right-0 left-60 top-20 h-full max-w-[250px] opacity-120" style={{ fontWeight: 'bold' }}>
   <img
     src={BioImage}
     alt="Bio"
     className="w-auto object-contain"
-  />
-</div>
+  /> */}
+{/* </div> */}
 
       </div>
     </section>

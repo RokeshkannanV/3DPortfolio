@@ -3,11 +3,28 @@ import react from '@vitejs/plugin-react';
 
 export default defineConfig({
   plugins: [react()],
-  base: '/3DPortfolio/', 
+  base: '/3DPortfolio/',
   resolve: {
     alias: {
-      'three': 'three/src/Three.js',
+      'three': 'three',
     },
   },
   assetsInclude: ['**/*.glb'],
+  build: {
+    rollupOptions: {
+      output: {
+        // Add these lines to your existing output object
+        chunkFileNames: 'assets/[name]-[hash].js',
+        entryFileNames: 'assets/[name]-[hash].js',
+        
+        // Keep your existing manualChunks configuration
+        manualChunks(id) {
+          if (id.includes('node_modules')) {
+            return id.toString().split('node_modules/')[1].split('/')[0].toString();
+          }
+        },
+      },
+    },
+    chunkSizeWarningLimit: 1600,
+  },
 });
